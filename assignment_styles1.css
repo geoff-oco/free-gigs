@@ -1,0 +1,171 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*set standard body font, background color, text color, and minimum height*/
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+}
+/*set error message color, font weight, text alignment, margin, and font family*/
+.error-message {
+    color: #ff4136;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+/*set h1 font family, text alignment, margin, and color*/
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #1db954;
+}
+/*set layout container display, width, margin, and display*/
+.layout-container {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+}
+/*set sidebar width, background color, padding, border, minimum height, and display*/
+.sidebar {
+    width: 25%;
+    background-color: #181818;
+    padding: 20px;
+    border-right: 1px solid #282828;
+    min-height: 100vh;
+}
+/*set sidebar fieldset border, padding, border radius, and font weight*/
+.sidebar fieldset {
+    border: 1px solid #282828;
+    padding: 15px;
+    border-radius: 8px;
+}
+/*set sidebar legend font weight and color*/
+.sidebar legend {
+    font-weight: bold;
+    color: #1db954;
+}
+/*set sidebar input text and password width, padding, margin, border, border radius, background color, and text color*/
+.sidebar input[type="text"],
+.sidebar input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #282828;
+    border-radius: 4px;
+    background-color: #282828;
+    color: #ffffff;
+}
+/*set sidebar input submit padding, background color, text color, border, border radius, cursor, font weight, and transition*/
+.sidebar input[type="submit"] {
+    padding: 12px 20px;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+/*set sidebar input submit hover background color*/
+.sidebar input[type="submit"]:hover {
+    background-color: #1ed760;
+}
+/*set sidebar a color, text decoration, transition, and hover color and text decoration*/
+.sidebar a {
+    color: #1db954;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+/*set sidebar a hover color and text decoration*/
+.sidebar a:hover {
+    color: #1ed760;
+    text-decoration: underline;
+}
+/*set content width, padding, background color, and overflow y*/
+.content {
+    width: 75%;
+    padding: 20px;
+    background-color: #181818;
+    overflow-y: auto;
+}
+/*set content ul list style type, padding, and color*/
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+/*set content ul li margin, font size, and color*/
+.content ul li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #b3b3b3;
+}
+/*set media query for screen sizes less than 768px*/
+@media (max-width: 768px) {
+    .layout-container {
+        flex-direction: column;
+    }
+    /*set sidebar and content width to 100%*/
+    .sidebar, .content {
+        width: 100%;
+    }
+    /*set sidebar border right to none and border bottom to 1px*/
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #282828;
+    }
+}
+
+
+body > *:not(.sidebar):not(.content):not(h1) {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+a:not(.sidebar a):not(.content a) {
+    color: #1db954;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:not(.sidebar a):not(.content a):hover {
+    color: #1ed760;
+    text-decoration: underline;
+}
+
+input:not(.sidebar input):not(.content input),
+textarea:not(.sidebar textarea):not(.content textarea),
+select:not(.sidebar select):not(.content select) {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #282828;
+    border-radius: 25px;
+    background-color: #282828;
+    color: #ffffff;
+}
+
+button:not(.sidebar button):not(.content button),
+input[type="submit"]:not(.sidebar input[type="submit"]):not(.content input[type="submit"]) {
+    padding: 12px 20px;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:not(.sidebar button):not(.content button):hover,
+input[type="submit"]:not(.sidebar input[type="submit"]):not(.content input[type="submit"]):hover {
+    background-color: #1ed760;
+}
